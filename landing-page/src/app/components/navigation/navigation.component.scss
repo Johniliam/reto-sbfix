@@ -4,9 +4,10 @@ mat-toolbar {
   padding: 0 64px;
   a {
     text-decoration: none;
-    &.active-ink {
+    &.active-link {
       color: white;
     }
+    color: black;
     span {
       margin-left: 24px;
     }
