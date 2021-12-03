@@ -1,16 +1,28 @@
 <mat-toolbar color="accent">
     <span>
       <a routerLink="/">
-        <span>Movie Recomendator</span>
+        <span>Peliculas Recomendadas</span>
       </a>
     </span>
+    <div>
+      <a>Color de Fondo</a>
+      <input matInput placeholder="Ej. #ffcdd2" id='background' maxlength="7" #background/>
+      <button
+      color="primary"
+      mat-raised-button
+      (click)="changeBG(background.value)"
+      type="submit"
+    >
+      <span>Cambiar</span>
+    </button>
+    </div>
     <span>
       <a
         *ngIf="isAuthenticated"
         routerLinkActive="active-link"
         routerLink="/posts"
       >
-        <span>Movies</span>
+        <span>Recomendaciones</span>
       </a>
       <a
         *ngIf="!isAuthenticated"

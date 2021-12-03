@@ -12,4 +12,15 @@ mat-toolbar {
       margin-left: 24px;
     }
   }
+  div {
+    display: flex;
+    padding: 3px;
+    a {
+      margin-right: 10px;
+    }
+    input {
+      width: 100px;
+      margin-right: 10px;
+    }
+  }
 }
