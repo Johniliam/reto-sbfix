@@ -1,8 +1,19 @@
-<div class='container'>
-    <div class='movieImg'>
-
+<div class='container' *ngIf="pokemonData">
+    <div class='pokemonImg'>
+        <img src="{{pokemonData.sprites.back_default}}"/>
+        <img src="{{pokemonData.sprites.front_default}}"/>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{pokemonData.id}}.png"/>
+        <img src="{{pokemonData.sprites.front_shiny}}"/>
+        <img src="{{pokemonData.sprites.back_shiny}}"/>
     </div>
-    <div class="movieText">
-
+    <div class="pokemonText">
+        <p>{{pokemonData.name}}</p>
     </div>
+    <button
+      color="accent"
+      mat-raised-button
+      (click)="next()"
+    >
+    <span>Siguiente</span>
+    </button>
 </div>
